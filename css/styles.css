@@ -1,0 +1,342 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+@font-face {
+  font-family: KonstantGrotesk;
+  src: url(../assets/fonts/KonstantGrotesk.otf); }
+@font-face {
+  font-family: NeueMontreal;
+  src: url(../assets/fonts/NeueMontreal-Light.otf); }
+@font-face {
+  font-family: NeueMontreal-Bold;
+  src: url(../assets/fonts/NeueMontreal-Bold.otf); }
+html, body {
+  width: 100%; }
+
+body {
+  font-family: NeueMontreal, sans-serif;
+  background: url(../assets/img/WebsiteBackground.png);
+  position: relative;
+  overflow-x: hidden;
+  color: #EBE9E7; }
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.container-inner {
+  padding: 5rem; }
+
+.box-container {
+  width: 1000px; }
+
+.pad-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.pad-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+h1, h2, h3, h4, h5, h6, .banner span {
+  font-family: KonstantGrotesk, sans-serif;
+  font-weight: normal; }
+
+h1, h2 {
+  font-size: 50px;
+  padding-bottom: 2rem; }
+
+h3 {
+  font-size: 25px;
+  padding-bottom: 2rem; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px;
+  line-height: 1.2em; }
+
+p {
+  font-size: 22px;
+  padding-bottom: 1rem;
+  line-height: 1.5em; }
+
+a {
+  text-decoration: none;
+  color: #EBE9E7;
+  letter-spacing: 2px; }
+
+button {
+  font-family: KonstantGrotesk, sans-serif;
+  color: #EBE9E7;
+  width: 350px;
+  padding: 0.5rem 0 0.4rem;
+  border-radius: 28px;
+  background: transparent;
+  border: 2px solid #EBE9E7;
+  letter-spacing: 2px;
+  background: url(../assets/img/ButtonBackground.png) no-repeat 0 50%; }
+  button:hover {
+    color: #191C1E;
+    background: #D9D5CF; }
+
+.cta-btn button {
+  margin: 0 1rem; }
+
+section {
+  padding: 5rem 0; }
+
+nav {
+  position: absolute;
+  background-color: rgba(25, 28, 30, 0.6);
+  width: 100%;
+  top: -4rem;
+  left: 0;
+  border-bottom: 1px solid #D9D5CF;
+  z-index: 100;
+  animation-name: menu-down;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards; }
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.nav-logo img {
+  width: 166px; }
+
+.nav-items ul li {
+  display: inline;
+  margin: 0 1rem; }
+
+.nav-contact {
+  width: 166px;
+  text-align: right; }
+
+.landing.home {
+  height: 100vh;
+  overflow-y: hidden; }
+
+.background-landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; }
+
+.video-container {
+  position: relative;
+  height: 100vh; }
+  .video-container video {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    object-position: top; }
+
+.services-cta {
+  position: relative; }
+
+.banner-container, .project-banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+  border-top: 1px solid #D9D5CF;
+  border-bottom: 1px solid #D9D5CF; }
+
+.banner, .banner-title {
+  position: relative;
+  right: 0;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal; }
+  .banner span, .banner-title span {
+    text-transform: uppercase;
+    margin: 0 0.8vw 0 0;
+    display: inline;
+    white-space: nowrap; }
+
+.banner {
+  animation-name: banner-anim;
+  animation-duration: 20s; }
+  .banner span {
+    font-size: 1.3vw;
+    letter-spacing: 6px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D9D5CF; }
+
+.banner-title {
+  animation-name: banner-anim-proj;
+  animation-duration: 20s; }
+  .banner-title span {
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #EBE9E7; }
+
+.center-content {
+  text-align: center; }
+  .center-content h2 {
+    width: 1300px;
+    margin: auto;
+    line-height: 1.2em; }
+  .center-content p {
+    width: 840px;
+    margin: auto;
+    padding-bottom: 2rem; }
+
+.box-container {
+  width: 1500px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 5rem; }
+  .box-container.alt {
+    padding-bottom: 0; }
+  .box-container.dual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row; }
+    .box-container.dual .proj2, .box-container.dual .proj3 {
+      width: 45%; }
+
+.home-project {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .home-project img {
+    filter: grayscale(100%);
+    transition: filter 0.2s; }
+  .home-project.proj1 {
+    margin-left: auto;
+    align-items: flex-end; }
+    .home-project.proj1 img, .home-project.proj1 .project-banner {
+      width: 60%; }
+  .home-project.proj2 {
+    align-items: flex-start; }
+    .home-project.proj2 img, .home-project.proj2 .project-banner {
+      width: 100%; }
+  .home-project.proj3 {
+    margin-left: auto;
+    align-items: flex-end;
+    padding-top: 250px; }
+    .home-project.proj3 img, .home-project.proj3 .project-banner {
+      width: 100%; }
+  .home-project.proj4 {
+    align-items: center; }
+    .home-project.proj4 img, .home-project.proj4 .project-banner {
+      width: 60%; }
+
+.project-banner {
+  border-top: none;
+  transition: background-image 0.2s; }
+  .project-banner:hover {
+    background-image: url(../assets/img/ButtonBackground.png); }
+
+.banner-title {
+  animation: none; }
+  .banner-title span {
+    font-size: 25px; }
+  .banner-title .banner-text {
+    display: none; }
+
+.instagram {
+  text-align: center;
+  position: relative;
+  padding: 2rem 1rem; }
+
+.insta-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .insta-img img {
+    width: 18.5vw;
+    filter: grayscale(100%);
+    transition: filter 0.2s; }
+    .insta-img img:hover {
+      filter: grayscale(0%); }
+
+footer .footer-tel {
+  margin-bottom: 0.6rem; }
+footer .footer-tel, footer .footer-email {
+  margin-top: 0.3rem; }
+
+.footer-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #D9D5CF;
+  border-bottom: 1px solid #D9D5CF; }
+
+.footer-logo {
+  width: 180px; }
+
+.footer-slogan {
+  width: 200px;
+  padding: 0 6vw;
+  line-height: 1.2em; }
+
+.footer-menu {
+  font-size: 18px;
+  display: flex;
+  margin-left: auto;
+  text-align: right; }
+  .footer-menu ul {
+    list-style-type: none;
+    color: #D9D5CF;
+    line-height: 1.3em; }
+    .footer-menu ul a:hover {
+      font-weight: bold; }
+
+.socialmedia-menu {
+  margin-left: 5vw; }
+
+.footer-extra {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer-extra span {
+    font-size: 12px;
+    color: #D9D5CF;
+    letter-spacing: 1px; }
+
+footer, .instagram {
+  background: #111111; }
+
+.hover img {
+  filter: grayscale(0%); }
+.hover .project-banner {
+  background-image: url(../assets/img/ButtonBackground.png); }
+.hover .banner-title {
+  animation: banner-anim-proj 10s infinite linear normal; }
+.hover .banner-title .banner-text {
+  display: block !important; }
+.hover .banner-title .project-title {
+  display: none !important; }
+
+@keyframes menu-down {
+  from {
+    top: -4rem; }
+  to {
+    top: 0; } }
+@keyframes banner-anim {
+  0% {
+    right: 0; }
+  100% {
+    right: 123.5rem; } }
+@keyframes banner-anim-proj {
+  0% {
+    right: 0; }
+  100% {
+    right: 60rem; } }
+
+/*# sourceMappingURL=styles.css.map */
