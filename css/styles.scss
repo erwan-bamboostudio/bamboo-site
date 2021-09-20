@@ -1,6 +1,9 @@
 *{
   padding: 0;
   margin: 0;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
 }
 
 $black: #0D0D0D;
@@ -49,6 +52,10 @@ body{
   width: 1000px;
 }
 
+.pad-0{
+  padding: 0 !important;
+}
+
 .pad-1{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -57,6 +64,27 @@ body{
 .pad-2{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pad-t1{
+  padding-top: 1rem;
+}
+
+.pad-t2{
+  padding-top: 2rem;
+}
+
+
+.pad-b1{
+  padding-bottom: 1rem;
+}
+
+.pad-b2{
+  padding-bottom: 2rem;
+}
+
+.pad-b5{
+  padding-bottom: 5rem;
 }
 
 .border-tb{
@@ -85,6 +113,13 @@ h1, h2{
   font-size: 50px;
   padding-bottom: 2rem;
 }
+
+h2.grid{
+  font-family: NeueMontreal, sans-serif;
+  font-size: 35px;
+  padding-bottom: 1rem;
+}
+
 h3{
   font-size: 25px;
   padding-bottom: 2rem;
@@ -386,8 +421,12 @@ nav{
   -webkit-text-stroke-color: $white2;
 }
 
-.section-content{
-  padding-bottom: 2rem;
+.section-title{
+  padding-bottom: 2rem;;
+}
+
+.section-quote{
+  line-height: 1.2em;
 }
 
 .studio-commitment .section-content{
@@ -425,11 +464,26 @@ nav{
   bottom: 0;
 }
 
-#clients{
-  .section-content{
-    h1{
-      width: 1100px;
-    }
+#clients h1{
+    width: 1100px;
+}
+
+.client-table{
+  width: 70%;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: $white2;
+}
+.grid-element{
+  width: 50%;
+  align-items: stretch;
+  border-right: 1px solid $white2;
+  padding-right: 2rem;
+  &.alt{
+    border-right: none;
+    padding-right: 0;
+    padding-left: 2rem;
   }
 }
 
@@ -569,7 +623,7 @@ footer{
 }
 
 .footer-slogan{
-  width: 200px;
+  width: 430px;
   padding: 0 6vw;
   line-height: 1.2em;
 }

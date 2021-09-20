@@ -1,3 +1,5 @@
+
+
 $(".proj1 img").hover(
   function() {
     $(".proj1").toggleClass("hover");
@@ -36,3 +38,4 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
