@@ -37,12 +37,12 @@ body{
 }
 
 .container{
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .container-inner{
-  padding: 5rem;
+  padding:0 5rem ;
 }
 
 .box-container{
@@ -59,6 +59,22 @@ body{
   padding-bottom: 2rem;
 }
 
+.border-tb{
+  border-top: 1px solid $white2;
+  border-bottom: 1px solid $white2;
+}
+
+.border-t{
+  border-top: 1px solid $white2;
+}
+
+.border-b{
+  border-bottom: 1px solid $white2;
+}
+
+.relative{
+  position: relative;
+}
 
 h1, h2, h3, h4, h5, h6, .banner span{
   font-family: KonstantGrotesk, sans-serif;
@@ -80,12 +96,15 @@ h5{
   font-size: 16px;
   line-height: 1.2em;
 }
+h6{
+  font-size: 20px;
+}
 
-
-p{
+p, li{
   font-size: 22px;
-  padding-bottom: 1rem;
-  line-height: 1.5em;
+  &.sm{
+    font-size: 18px;
+  }
 }
 
 a{
@@ -94,7 +113,15 @@ a{
   letter-spacing: 2px;
 }
 
+nav a, footer a{
+  font-size: 16px;
+}
+
 button{
+  border: none;
+}
+
+.btn{
   font-family: KonstantGrotesk, sans-serif;
   color: $white;
   width: 350px;
@@ -123,12 +150,12 @@ nav{
   position: absolute;
   background-color: rgba(25, 28, 30, 0.6);
   width: 100%;
-  top: -4rem;
+  top: -4.5rem;
   left: 0;
   border-bottom: 1px solid $white2;
   z-index: 100;
   animation-name: menu-down;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
@@ -137,6 +164,7 @@ nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .nav-logo img{
   width: 166px;
@@ -151,7 +179,7 @@ nav{
 }
 
 .landing{
-  &.home{
+  &.home, &.studio{
     height: 100vh;
     overflow-y: hidden;
   }
@@ -297,21 +325,205 @@ nav{
 .project-banner{  //line 146
   border-top: none;
   transition: background-image 0.2s;
-  &:hover{
-    background-image: url(../assets/img/ButtonBackground.png);
-  }
 }
 
-.banner-title{
+.banner-title{ //Extra Line 218
   animation: none;
-  span{
-    font-size: 25px;
-  }
   .banner-text{
     display: none;
   }
 }
 
+.studio .video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-landing-text{
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top:10vh;
+  height: 90vh;
+
+}
+.studio-bg-name{
+  font-family: KonstantGrotesk;
+  font-size: 245px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: $white2;
+  letter-spacing: 1rem;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  line-height: 1em;
+}
+
+.studio-bg-slogan{
+  position: absolute;
+  max-width: 1300px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.section-title, .accordion-subtitle{
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: $white2;
+}
+
+.section-content{
+  padding-bottom: 2rem;
+}
+
+.studio-commitment .section-content{
+  display: flex;
+  flex-direction: row;
+  h1{
+    width: 875px;
+  }
+  p{
+    width: 650px;
+  }
+  .paragraphs{
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.studio-services{
+  position: relative;
+  width: 70vw;
+  margin-left: auto;
+}
+
+.graphic1, .graphic2{
+  position: absolute;
+  left: -6rem;
+  width: 350px;
+}
+
+.graphic1{
+  top: 5rem;
+}
+
+.graphic2{
+  bottom: 0;
+}
+
+#clients{
+  .section-content{
+    h1{
+      width: 1100px;
+    }
+  }
+}
+
+
+//_____________________________ACCORDION___________________
+
+.accordion {
+  color: $white;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+button.accordion{
+  font-size: 45px;
+  font-family: NeueMontreal;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: flex;
+  p, li{
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+  }
+  ul{
+    padding-left: 1rem;
+  }
+}
+.accordion:after {
+  content: '\1F865'; /* Unicode character for "arrow up" sign (🡥) */
+  font-size: 45px;
+  color: $white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\1F866"; /* Unicode character for "arrow down" sign (🡦) */
+}
+
+.accordion-subtitle{
+  font-family: KonstantGrotesk;
+}
+
+.split-panel{
+  &.alt{
+    margin-left: auto;
+  }
+}
+
+.split-panel{
+  width: 650px;
+  &.alt{
+    width: 450px;
+  }
+}
+
+.list-table{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-subtitle{
+  padding-bottom: 0.5rem;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: left;
+    font-size: 18px;
+    font-family: NeueMontreal;
+    color: $white;
+    background: url(../assets/img/ButtonBackground.png) no-repeat;
+
+}
+
+//_____________________________FOOTER______________________
 
 .instagram{
   text-align: center;
@@ -392,14 +604,12 @@ footer{
     letter-spacing: 1px;
   }
 }
-
-//________________________________________________________________
-
 footer, .instagram{
-  background: $black2;
+  background: $black;
 }
 
-//__________________________________________________________________
+
+//___________________HOME PROJECT CARD HOVER FUNCTIONS______________________
 
 .hover{
   img{
@@ -440,4 +650,9 @@ footer, .instagram{
 @keyframes banner-anim-proj{
   0% {right: 0;}
   100% {right: 60rem;}
+}
+
+@keyframes fade-in{
+  from {opacity: 0;}
+  to {opacity: 100%}
 }
