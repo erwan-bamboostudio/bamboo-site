@@ -808,6 +808,12 @@ footer, .instagram {
   background: #0D0D0D;
 }
 
+@media (max-width: 1200px) {
+  .box-container {
+    width: 1205px;
+  }
+}
+
 .hover img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
