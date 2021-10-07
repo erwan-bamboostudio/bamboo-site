@@ -116,7 +116,18 @@ nav{
 .landing{
   &.home, &.studio{
     height: 100vh;
-    overflow-y: hidden;
+    // overflow-y: hidden;
+  }
+}
+
+.home .background-landing{
+  background-image: url("../assets/img/LandingBackground.png");
+  video{
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards; 
+    animation-timing-function: ease;
   }
 }
 
@@ -125,7 +136,6 @@ nav{
   top: 0;
   left: 0;
   width: 100vw;
-  background-image: url("../assets/img/LandingBackground.png");
   background-size: cover;
 }
 .video-container{
@@ -137,11 +147,6 @@ nav{
     position: absolute;
     object-fit: cover;
     object-position: top;
-    animation-name: fade-out;
-    animation-duration: 1s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards; 
-    animation-timing-function: ease;
   }
 }
 
@@ -264,6 +269,18 @@ nav{
     }
   }
 }
+
+.work-project{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  img{
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+    width: 100%;
+  }
+}
+
 .project-banner{  //line 146
   border-top: none;
   transition: background-image 0.2s;
@@ -355,7 +372,11 @@ nav{
   position: relative;
   width: 70vw;
   margin-left: auto;
+  .paragraphs{
+    padding-bottom: 2rem;
+  }  
 }
+
 
 .graphic1, .graphic2{
   position: absolute;
@@ -371,17 +392,32 @@ nav{
   bottom: 0;
 }
 
-#clients h1{
+#clients, #values{
+  h1{
     width: 1100px;
+  }
 }
 
-.client-table{
+
+.client-table, .projects-table{
   width: 70%;
   margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   color: $white2;
+  .grid-element{
+    display: flex;
+    align-items: flex-start;
+    img{
+      padding-right: 2rem;
+    }
+  }
 }
+
+.projects-table{
+  width: 76%;
+}
+
 .grid-element{
   width: 50%;
   align-items: stretch;
@@ -394,6 +430,29 @@ nav{
   }
 }
 
+#values{
+  background-image: url("../assets/img/Group 159.png")
+}
+
+.values-table{
+  width: 80%;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: $white2;
+}
+
+.grid-element2{
+  width: 33%;
+  align-items: stretch;
+  padding-left: 7rem;
+  h6{
+    padding-bottom: 1rem;
+  }
+  h3{
+    padding-bottom: 0.5rem;
+  }
+}
 
 //_____________________________ACCORDION___________________
 
@@ -447,6 +506,7 @@ button.accordion{
 
 .accordion-subtitle{
   font-family: KonstantGrotesk;
+  padding-top: 2rem;
 }
 
 .split-panel{
@@ -483,6 +543,47 @@ button.accordion{
     background: url(../assets/img/ButtonBackground.png) no-repeat;
 
 }
+
+.landing-work .container{
+  display: flex;
+  flex-direction: row;
+}
+
+.filter{
+  display: flex;
+  flex-direction: column;
+  button{
+    margin-top: 0.5rem;
+  }
+}
+
+.work-intro{
+  margin-left: 10rem;
+  h1{
+    padding: 0;
+  }
+}
+
+section.landing-work{
+  padding: 12rem 0 8rem;
+}
+
+section#projects{
+  padding: 0;
+  .client-table .grid-element img {
+    padding: 0;
+  }
+  .box-container {
+    width: 1800px;
+    padding-bottom: 0;
+  }
+  .banner-container, .project-banner {
+    padding: 1rem 0 0;
+    border-bottom: none;
+  }
+}
+
+project .
 
 //_____________________________FOOTER______________________
 
@@ -596,16 +697,9 @@ footer, .instagram{
 
 
 //___________________HOME PROJECT CARD HOVER FUNCTIONS______________________
-
 .hover{
-  img{
-      filter: grayscale(0%);
-  }
   .project-banner{
       background-image: url(../assets/img/ButtonBackground.png);
-  }
-  .banner-title{
-      animation: banner-anim-proj 10s infinite linear normal;
   }
   .banner-title .banner-text{
     display: block !important;
@@ -614,6 +708,21 @@ footer, .instagram{
     display: none !important
   }
 }
+.hover, .hover-work{
+  img{
+      filter: grayscale(0%);
+  }
+  .banner-title{
+      animation: banner-anim-proj 10s infinite linear normal;
+  }
+  // .banner-title .banner-text{
+  //   display: block !important;
+  // }
+  // .banner-title .project-title{
+  //   display: none !important
+  // }
+}
+
 
 //________________________________________________________________
 

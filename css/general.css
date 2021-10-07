@@ -38,6 +38,12 @@ body {
   width: 1000px;
 }
 
+.fit-content {
+  max-height: -webkit-fit-content !important;
+  max-height: -moz-fit-content !important;
+  max-height: fit-content !important;
+}
+
 .pad-0 {
   padding: 0 !important;
 }
@@ -118,6 +124,10 @@ h4 {
   font-size: 18px;
 }
 
+.filter h4 {
+  font-size: 16px;
+}
+
 h5 {
   font-size: 16px;
   line-height: 1.2em;
@@ -171,12 +181,22 @@ button {
   background: #D9D5CF;
 }
 
+.btn-filter {
+  width: 280px;
+  background: transparent;
+}
+
+.btn-filter:hover {
+  color: #EBE9E7;
+  background: url(../assets/img/ButtonBackground.png) no-repeat 0 50%;
+}
+
 .cta-btn button {
   margin: 0 1rem;
 }
 
 section {
-  padding: 5rem 0;
+  padding: 8rem 0;
 }
 
 .visible {

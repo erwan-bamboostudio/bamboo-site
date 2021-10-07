@@ -143,7 +143,23 @@ nav {
 
 .landing.home, .landing.studio {
   height: 100vh;
-  overflow-y: hidden;
+}
+
+.home .background-landing {
+  background-image: url("../assets/img/LandingBackground.png");
+}
+
+.home .background-landing video {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .background-landing {
@@ -151,7 +167,6 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-  background-image: url("../assets/img/LandingBackground.png");
   background-size: cover;
 }
 
@@ -168,16 +183,6 @@ nav {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  -webkit-animation-name: fade-out;
-          animation-name: fade-out;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
 }
 
 .services-cta {
@@ -354,6 +359,27 @@ nav {
   width: 60%;
 }
 
+.work-project {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-project img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.2s;
+  transition: -webkit-filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+  width: 100%;
+}
+
 .project-banner {
   border-top: none;
   -webkit-transition: background-image 0.2s;
@@ -477,6 +503,10 @@ nav {
   margin-left: auto;
 }
 
+.studio-services .paragraphs {
+  padding-bottom: 2rem;
+}
+
 .graphic1, .graphic2 {
   position: absolute;
   left: -6rem;
@@ -491,11 +521,11 @@ nav {
   bottom: 0;
 }
 
-#clients h1 {
+#clients h1, #values h1 {
   width: 1100px;
 }
 
-.client-table {
+.client-table, .projects-table {
   width: 70%;
   margin-left: auto;
   display: -webkit-box;
@@ -504,6 +534,23 @@ nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: #D9D5CF;
+}
+
+.client-table .grid-element, .projects-table .grid-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.client-table .grid-element img, .projects-table .grid-element img {
+  padding-right: 2rem;
+}
+
+.projects-table {
+  width: 76%;
 }
 
 .grid-element {
@@ -519,6 +566,37 @@ nav {
   border-right: none;
   padding-right: 0;
   padding-left: 2rem;
+}
+
+#values {
+  background-image: url("../assets/img/Group 159.png");
+}
+
+.values-table {
+  width: 80%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #D9D5CF;
+}
+
+.grid-element2 {
+  width: 33%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-left: 7rem;
+}
+
+.grid-element2 h6 {
+  padding-bottom: 1rem;
+}
+
+.grid-element2 h3 {
+  padding-bottom: 0.5rem;
 }
 
 .accordion {
@@ -577,6 +655,7 @@ button.accordion {
 
 .accordion-subtitle {
   font-family: KonstantGrotesk;
+  padding-top: 2rem;
 }
 
 .split-panel.alt {
@@ -619,6 +698,60 @@ button.accordion {
   font-family: NeueMontreal;
   color: #EBE9E7;
   background: url(../assets/img/ButtonBackground.png) no-repeat;
+}
+
+.landing-work .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filter button {
+  margin-top: 0.5rem;
+}
+
+.work-intro {
+  margin-left: 10rem;
+}
+
+.work-intro h1 {
+  padding: 0;
+}
+
+section.landing-work {
+  padding: 12rem 0 8rem;
+}
+
+section#projects {
+  padding: 0;
+}
+
+section#projects .client-table .grid-element img {
+  padding: 0;
+}
+
+section#projects .box-container {
+  width: 1800px;
+  padding-bottom: 0;
+}
+
+section#projects .banner-container, section#projects .project-banner {
+  padding: 1rem 0 0;
+  border-bottom: none;
 }
 
 .instagram {
@@ -741,18 +874,8 @@ footer, .instagram {
   }
 }
 
-.hover img {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
 .hover .project-banner {
   background-image: url(../assets/img/ButtonBackground.png);
-}
-
-.hover .banner-title {
-  -webkit-animation: banner-anim-proj 10s infinite linear normal;
-          animation: banner-anim-proj 10s infinite linear normal;
 }
 
 .hover .banner-title .banner-text {
@@ -761,6 +884,16 @@ footer, .instagram {
 
 .hover .banner-title .project-title {
   display: none !important;
+}
+
+.hover img, .hover-work img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.hover .banner-title, .hover-work .banner-title {
+  -webkit-animation: banner-anim-proj 10s infinite linear normal;
+          animation: banner-anim-proj 10s infinite linear normal;
 }
 
 @-webkit-keyframes menu-down {
