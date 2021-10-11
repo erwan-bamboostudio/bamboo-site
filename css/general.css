@@ -38,6 +38,10 @@ body {
   width: 1000px;
 }
 
+.box-container.alt {
+  padding-bottom: 0;
+}
+
 .fit-content {
   max-height: -webkit-fit-content !important;
   max-height: -moz-fit-content !important;
